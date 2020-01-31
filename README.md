@@ -8,6 +8,8 @@ Voici la liste des actions qui y seront faites :
         source => <canvas></canvas>,  getContext() 
         https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Utilisation_de_base
 
+- Le Snake sera un tableau. Il mangera des bonbon (des divs). Dès qu'un bonbon sera mangé, la tableau aura une "tableau.push()" en plus (+1). Il se verra affiché avec une div ou pixel en plus.
+
 - Faire un bouton " Start " qui mettra le snack en route.
 
 - Définir ou trouve la valeur que renvoit les touches : Haut, Bas,Gauche, Droite.
