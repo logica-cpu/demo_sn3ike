@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Jeu du Snake</title>
     
+    <script type="text/javascript">
+       function draw(){
+           var canvas = document.getElementById('zone_de_jeu');
+           if (canvas.getContext){
+               var ctx = canvas.getContext('2d');
+
+               ctx.fillStyle = 'rgb(200, 0,0)';
+               ctx.fillRect(10, 10, 50, 50);   
+
+               ctx.fillStyle = 'rgb(0, 0, 200, 0.5)';
+               ctx.fillRect(30, 30, 50, 50);  
+
+
+               /*Création d'un triangle*/
+              ctx.beginPath();//Permet de créer un nouveau trajet.
+              ctx.moveTo(75,50);//Permet de définir ton point de Départ de tracet.
+              ctx.lineTo(100, 75);// Traçage des lignes.
+              ctx.lineTo(100, 25);// Traçage des lignes
+              ctx.fill();// Dessine une forme pleine en remplissant les zone de contenu.
+
+                       }
+       }    
+    </script>
+
+
+
+
+
+</head>
+<body onload="draw();">
+    <div id="game">
+        <h1>Jeu Du snake</h1>
+        <canvas id="zone_de_jeu" width="400" height="400"></canvas>
+   <Button id="start">start</Button>
+</div>
 </body>
 </html>
